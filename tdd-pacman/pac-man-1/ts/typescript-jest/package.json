@@ -1,0 +1,53 @@
+{
+  "name": "typescript-jest-boilerplate",
+  "version": "1.0.0",
+  "license": "MIT",
+  "author": "Charles Ahmadzadeh <superzadeh@outlook.com>",
+  "scripts": {
+    "test": "jest",
+    "test:cover": "jest --coverage",
+    "test:watch": "jest --watchAll",
+    "compile": "tsc --project tsconfig.json"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@types/jest": "24.0.23",
+    "@types/node": "12.12.8",
+    "babel-core": "6.26.3",
+    "babel-jest": "24.9.0",
+    "jest": "24.9.0",
+    "ts-jest": "24.1.0",
+    "typescript": "3.7.2"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "roots": [
+      "<rootDir>/src"
+    ],
+    "coverageReporters": [
+      "json",
+      "lcov",
+      "text",
+      "html"
+    ],
+    "transform": {
+      "^.+\\.ts?$": "ts-jest"
+    },
+    "testRegex": "(\\.|/)(test)\\.(js|tsx?)$",
+    "moduleFileExtensions": [
+      "ts",
+      "js",
+      "json",
+      "node"
+    ]
+  },
+  "standard": {
+    "env": [
+      "node",
+      "jest"
+    ],
+    "globals": [
+      "expect"
+    ]
+  }
+}
